@@ -40,7 +40,7 @@ public class User_Registration {
 			ps.setString(5, mobileNumber);
 			// Step 4 :
 			int i = ps.executeUpdate();
-			System.out.println("Registration Successfully " + i);
+		//	System.out.println("Registration Successfully " + i);
 			
 		} catch (Exception e) {
 			e.getMessage();
@@ -63,6 +63,7 @@ public class User_Registration {
 		String userEmailId = sc.next();
 		System.out.println("Enter your MobileNumber>>");
 		String userMobileNumber = sc.next();
+		System.out.println("Registration successfully done.....");
 		User_Registration user_Registration = new User_Registration();
 		// calling method
 		user_Registration.getUserDetails(userName, userPassword, userAddress, userEmailId, userMobileNumber);
