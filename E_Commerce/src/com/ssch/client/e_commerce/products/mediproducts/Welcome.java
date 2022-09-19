@@ -1,10 +1,12 @@
 package com.ssch.client.e_commerce.products.mediproducts;
 
+import java.sql.SQLException;
+
 public class Welcome {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public static void main(String[] args) throws SQLException {
+		WelcomePage w = new WelcomePage();
+		w.welcome();
 	}
 
 }
