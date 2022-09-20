@@ -40,7 +40,7 @@ public class Admin {
 			DisplayProducts.selectDisplayProducts();
 			break;
 		case 2:
-			System.out.println("****View Products****");
+			System.out.println("****Add Products****");
 			UserInput.addProduct();
 			break;
 		/*
