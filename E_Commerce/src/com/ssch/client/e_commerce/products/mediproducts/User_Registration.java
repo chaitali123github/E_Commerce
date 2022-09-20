@@ -25,14 +25,14 @@ public class User_Registration {
 	// Create method getUserDetails for getdata.
 	
 	public void getUserDetails(String userName, String password, String address, String EmailId, String mobileNumber) throws SQLException {
-		Connection conn = null;
+		Connection con = null;
 		PreparedStatement ps = null;
 		try {
 			User_Registration user_Registration = new User_Registration();
-			conn = user_Registration.getConnectionDetails();
+			con = user_Registration.getConnectionDetails();
 			// Method Calling
 			// Step 3 :
-			ps = conn.prepareStatement("Insert into user_registration(userName, userPassword, userAddress,userEmailId,userMobileNumber)values (?,?,?,?,?)");
+			ps = con.prepareStatement("Insert into user (userName, userPassword, userAddress,userEmailId,userMobileNumber)values (?,?,?,?,?)");
 			ps.setString(1, userName);
 			ps.setString(2, password);
 			ps.setString(3, address);
@@ -40,13 +40,13 @@ public class User_Registration {
 			ps.setString(5, mobileNumber);
 			// Step 4 :
 			int i = ps.executeUpdate();
-		//	System.out.println("Registration Successfully " + i);
+			System.out.println("Registration Successfully " + i);
 			
 		} catch (Exception e) {
 			e.getMessage();
 		}
 		finally {
-			conn.close();
+			con.close();
 			ps.close();
 		}
 	}
@@ -64,9 +64,11 @@ public class User_Registration {
 		System.out.println("Enter your MobileNumber>>");
 		String userMobileNumber = sc.next();
 		System.out.println("Registration successfully done.....");
-		User_Registration user_Registration = new User_Registration();
-		// calling method
-		user_Registration.getUserDetails(userName, userPassword, userAddress, userEmailId, userMobileNumber);
+		
+		 User_Registration user_Registration = new User_Registration(); 
+		 // calling method
+	    user_Registration.getUserDetails(userName, userPassword, userAddress,userEmailId, userMobileNumber);
+		 
 		
 		
 	}

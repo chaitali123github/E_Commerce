@@ -14,7 +14,7 @@ public class ConnectionTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return null;
+		return con;
 	}
 
 	

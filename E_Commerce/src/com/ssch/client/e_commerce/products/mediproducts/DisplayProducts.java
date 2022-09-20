@@ -19,11 +19,11 @@ public class DisplayProducts {
 			ps = con.prepareStatement("Select * from mediproducts ");
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				System.out.println("ProductId =" + rs.getInt(1));
-				System.out.println("ProductName =" + rs.getString(2));
-				System.out.println("ProductDiscription =" + rs.getString(3));
-				System.out.println("ProductPrice =" + rs.getFloat(4));
-				System.out.println("ProductQuantity =" + rs.getInt(5));
+				
+				System.out.println("ProductName =" + rs.getString(1));
+				System.out.println("ProductDiscription =" + rs.getString(2));
+				System.out.println("ProductPrice =" + rs.getFloat(3));
+				System.out.println("ProductQuantity =" + rs.getInt(4));
 				System.out.println("_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_");
 				
 			}
